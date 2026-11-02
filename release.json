@@ -1,7 +1,10 @@
 {
   "model": {
     "repo_id": "k2021211255/RSI-JEV-27b",
-    "revision": "8ad76019a5b095947b523ea693a668314a374cf7"
+    "revision": "f2552a5808926a29a2fd09ff686c31e952876bb4",
+    "base_included": true,
+    "base_directory": "base",
+    "bundle_directory": "bundle"
   },
   "results": {
     "repo_id": "k2021211255/RSI-JEV-27b-Results",
@@ -12,5 +15,6 @@
   "public_vision_index": 78.40964645834777,
   "rows": 12210,
   "correct": 9940,
-  "pull_request_created": false
+  "pull_request_created": false,
+  "offline_package_check": "verification/offline_package_check.json"
 }

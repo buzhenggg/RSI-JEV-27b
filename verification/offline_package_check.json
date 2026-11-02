@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "offline": true,
+  "outbound_network_attempts": 0,
+  "model_paths": "release model/base and model/bundle",
+  "engine_module": "mixed27b/engine.py",
+  "active_adapters": [
+    "default",
+    "mixed"
+  ],
+  "response": {
+    "model": "RSI-JEV-27b",
+    "answers": {
+      "answer": {
+        "type": "choice",
+        "choice": "A",
+        "probabilities": {
+          "A": 0.9926542043685913,
+          "B": 0.007345826365053654
+        }
+      }
+    }
+  },
+  "runtime": {
+    "python": "3.13.16",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "device": "cuda:0",
+    "batch_size": 1
+  },
+  "elapsed_seconds_including_load": 37.9890558719635,
+  "scope": "Single synthetic-image packaging smoke; no new benchmark score",
+  "source_sha256": {
+    "__init__.py": "fd9e13389f7631e38b561b18e3df95329c5f2560d328fdd2d66b22887093ad24",
+    "attention.py": "ef1b82863852b0eb6bf60da8cd610408363ce80d375b6b1a9c910c66396aa085",
+    "bundle.py": "07aacf8652ded58a004360cd9e267070dd7ef8bdc83f9a813a65bf45c990405c",
+    "cli.py": "3148167a1f30134fc9d1cc415aeb839923e5bfc6dd0bdb34cc913ace9f5614b6",
+    "engine.py": "a2b2598d0bdf0059024a0951768dbfde33bd6c31879cfde35e9f81f29514bfdb"
+  }
+}

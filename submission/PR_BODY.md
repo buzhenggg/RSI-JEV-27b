@@ -4,9 +4,9 @@ RSI-JEV-27b is a 27B multimodal decision model based on Qwen3.8-27B. It supports
 
 ## Model and results
 
-- Model, adapters, decision head and inference source: [RSI-JEV-27b](https://huggingface.co/k2021211255/RSI-JEV-27b/tree/8ad76019a5b095947b523ea693a668314a374cf7), revision `8ad76019a5b095947b523ea693a668314a374cf7`.
+- Complete model (base weights, both adapters, decision head) and inference source: [RSI-JEV-27b](https://huggingface.co/k2021211255/RSI-JEV-27b/tree/f2552a5808926a29a2fd09ff686c31e952876bb4), revision `f2552a5808926a29a2fd09ff686c31e952876bb4`.
 - Results: [RSI-JEV-27b-Results](https://huggingface.co/datasets/k2021211255/RSI-JEV-27b-Results/tree/07cee89570172e0d856ae918a8fb6b835ee21572), revision `07cee89570172e0d856ae918a8fb6b835ee21572`.
-- GitHub inference code: [buzhenggg/RSI-JEV-27b](https://github.com/buzhenggg/RSI-JEV-27b/tree/13447a13b2df2e3bed6bf7145117eb045e3faf62), source commit `13447a13b2df2e3bed6bf7145117eb045e3faf62`.
+- Evaluated inference implementation (unchanged): [mixed27b source](https://github.com/buzhenggg/RSI-JEV-27b/tree/13447a13b2df2e3bed6bf7145117eb045e3faf62/mixed27b), source commit `13447a13b2df2e3bed6bf7145117eb045e3faf62`.
 
 | Public suite | Public index | Answered requests | Correct | Complete |
 | --- | ---: | ---: | ---: | --- |
@@ -16,8 +16,8 @@ Predictions, option probabilities, scores, all shard environments and SHA256 man
 
 ## Inference and hardware
 
-- Use the bundled `mixed27b.engine:Mixed27BEngine` and [installation / reproduction instructions](https://huggingface.co/k2021211255/RSI-JEV-27b/blob/8ad76019a5b095947b523ea693a668314a374cf7/inference/README.md).
-- Load the pinned Qwen base, parent `default` LoRA, additional `mixed` LoRA and frozen parent decision head. Both adapters are explicitly active and remain unmerged.
+- Use the bundled `mixed27b.engine:Mixed27BEngine` and [installation / reproduction instructions](https://huggingface.co/k2021211255/RSI-JEV-27b/blob/f2552a5808926a29a2fd09ff686c31e952876bb4/inference/README.md).
+- Load `base/` and `bundle/` from the same pinned model snapshot: the included Qwen base, parent `default` LoRA, additional `mixed` LoRA and frozen parent decision head. Both adapters are explicitly active and remain unmerged.
 - Official SDK commit: `25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d`. Eight independent processes call the original official runner on disjoint shards (original row index modulo 8), merge unchanged JSONL lines and invoke the original official scorer. The suite passed the official verifier first; orchestration and shard records are included.
 - Hardware: eight A800-SXM4-80GB GPUs; one complete model per GPU, batch=1 and workers=1 per process.
 - Settings: BF16 backbone, FP32 adapters/head, BF16 autocast, SDPA, last-token readout, temperature 1, no generated chain of thought or permutation averaging. Sixteen full-attention layers are bidirectional; 48 recurrent/linear layers are causal. Normal FLA/Triton autotuning, no kernel pinning or probability-parity gate.
@@ -39,4 +39,4 @@ The synthetic families were designed after analysis of public benchmark weakness
 
 ## Reproduction
 
-Follow [inference/README.md](https://huggingface.co/k2021211255/RSI-JEV-27b/blob/8ad76019a5b095947b523ea693a668314a374cf7/inference/README.md) using the pinned release revisions above. Base: `Qwen/Qwen3.8-27B`, revision `1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0`. The model, code and result repositories are public.
+Follow [inference/README.md](https://huggingface.co/k2021211255/RSI-JEV-27b/blob/f2552a5808926a29a2fd09ff686c31e952876bb4/inference/README.md) using the pinned release revisions above. Base: `Qwen/Qwen3.8-27B`, revision `1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0`. The model, code and result repositories are public. All 18 base shards and tokenizer/processor files are included under `base/`; no upstream Qwen download is required. Offline loading and a synthetic-image prediction passed with both adapters active and zero outbound network attempts.

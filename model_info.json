@@ -12,5 +12,9 @@
   "parent_step": 3000,
   "mixed_step": 343,
   "decision_index_commit": "25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d",
-  "results_repository": "k2021211255/RSI-JEV-27b-Results"
+  "results_repository": "k2021211255/RSI-JEV-27b-Results",
+  "base_included": true,
+  "base_path": "base",
+  "bundle_path": "bundle",
+  "external_base_download_required": false
 }

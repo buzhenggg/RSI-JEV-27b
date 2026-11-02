@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "repo_id": "k2021211255/RSI-JEV-27b",
+  "revision": "f2552a5808926a29a2fd09ff686c31e952876bb4",
+  "authenticated": false,
+  "checked_base_files": 32,
+  "weight_shards": 18,
+  "checks": "Anonymous resolve/HEAD for all base files; weight ETags and sizes; downloaded config SHA256",
+  "checked_at": 1793623791.8258119
+}

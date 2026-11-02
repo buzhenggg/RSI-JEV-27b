@@ -17,17 +17,23 @@ the private/full leaderboard score. No Text benchmark result is claimed.
 
 ## Usage
 
-Follow [inference/README.md](inference/README.md) for installation, base-model
-download, Python examples and the official runner command. This repository
-contains **two LoRA adapters and the decision head**, plus the exact inference
-source; base weights are downloaded separately from the pinned official revision.
-Both adapters must be active. The model is not a standalone merged checkpoint.
+Follow [inference/README.md](inference/README.md) for installation, a complete
+model download, Python examples and the official runner command. The
+[HF model repository](https://huggingface.co/k2021211255/RSI-JEV-27b)
+contains **all 18 base-weight shards, tokenizer/processor files, both LoRA
+adapters and the decision head**, plus the exact evaluated inference source.
+No separate download from the upstream Qwen repository is required.
+
+The complete model is stored as `base/` plus `bundle/`. Both adapters are active
+and unmerged, exactly as in the evaluated model; use the supplied custom Engine.
+The base weights alone are not RSI-JEV-27b. The GitHub repository contains code
+and download instructions; the large weights are hosted on Hugging Face.
 
 ## Model composition
 
 | Component | Source |
 | --- | --- |
-| Base | `Qwen/Qwen3.8-27B`, revision `1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0` |
+| Base (included in `base/`) | `Qwen/Qwen3.8-27B`, revision `1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0` |
 | Parent adapter | Multitask SFT step-3000, `default` LoRA, rank 16 / alpha 32 |
 | Additional adapter | Mixed synthetic step-343, `mixed` LoRA, rank 8 / alpha 16 |
 | Decision head | Frozen parent 26 × 5120 readout |

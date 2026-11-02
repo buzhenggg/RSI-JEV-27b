@@ -13,16 +13,16 @@
       "sha256": "5e1dcd21407e8b65e765272cda785852105c5a52dffe7292e787d85dd43f4a53"
     },
     "README.md": {
-      "bytes": 3969,
-      "sha256": "51746240cdd223b455f78472f6437637d8c2bf9508f0c08e6d32d009bdcc90c0"
+      "bytes": 4351,
+      "sha256": "65b3c24e853041b4cc63d22524c34213f424dbe2d7e196f1c952a3f1fb08e517"
     },
     "bundle/manifest.json": {
       "bytes": 4218,
       "sha256": "ff610345f98b171d6e44bfe696453ef8db1cc5023569e484ab95491e980c77f3"
     },
     "inference/README.md": {
-      "bytes": 5067,
-      "sha256": "87960436086bb76b243490fda94f7aa1895f29d501aa9bfb6383c2d640aced0c"
+      "bytes": 5661,
+      "sha256": "e2c81849d5580b275f02560b464a9604cc4244766c168d422935f1779ce07db8"
     },
     "mixed27b/__init__.py": {
       "bytes": 85,
@@ -45,40 +45,52 @@
       "sha256": "a2b2598d0bdf0059024a0951768dbfde33bd6c31879cfde35e9f81f29514bfdb"
     },
     "model_info.json": {
-      "bytes": 491,
-      "sha256": "d3d1cb179a44700ef9800611216c9d2e71e27206b4b9ec754781abfa2ce333bf"
+      "bytes": 610,
+      "sha256": "f6065c96efd71feace30cf7c904b43d4452d28da4e90ecbcfba4f60effcb0103"
     },
     "pyproject.toml": {
       "bytes": 366,
       "sha256": "d64fa3079d84a7666c6d0406c97d9aca28e1b33674d7a52cd83f48be9c96c36d"
     },
     "release.json": {
-      "bytes": 506,
-      "sha256": "3554f338a3bab3dde359baa62de467437506d8c4bf8a84df96e641ad31e81a6d"
+      "bytes": 667,
+      "sha256": "5a6afb44c57ece83d6aaae7471eac890e765f56de916bdd1dd158054554c4f18"
     },
     "requirements.lock": {
       "bytes": 1592,
       "sha256": "632cc6e951a3cc3460a6a75629900287fbdc2385a8af1bdc37dc9555baf2440f"
     },
     "scripts/fetch_weights.py": {
-      "bytes": 494,
-      "sha256": "4bf100604cdfb9ec0f6fbfb8c2eff111d581e90e8a3d8c3c57c92fd858288121"
+      "bytes": 495,
+      "sha256": "22b9053fdb839735fceded3cb34b1e22f91cbfbb23e9e590f63d3c9dcad7d75a"
     },
     "scripts/official_8gpu.py": {
       "bytes": 11750,
       "sha256": "710325d59f050e31ffeace57cc17223be5f1e2abaac075c9b9755f225aecea87"
     },
     "submission/PR_BODY.md": {
-      "bytes": 5261,
-      "sha256": "d26fd71445e534cdbb45b5ae8d4777f91d402f6f628224b8bbc03f152b38432d"
+      "bytes": 5613,
+      "sha256": "194b1e5086573018d5aa7775243e4a8e0994340157799b036e48bab97f922588"
     },
     "submissions/README.md": {
       "bytes": 1699,
-      "sha256": "58d5cd7c5eedb55126c67aab98052b8647ca7f28d4ddcaf48363b1b8683c72ac"
+      "sha256": "aad54b2a9e0b5fcc4e750750562fbbac5a5b43fdac0f5541caec53f5ac91d5ff"
     },
     "tests/test_contract.py": {
       "bytes": 2555,
       "sha256": "33a92b9205e0dadd3dbd6b27366f9176f5ca0f8745b2f88859f07f32f98a3af7"
+    },
+    "verification/full_package_upload_state.json": {
+      "bytes": 442,
+      "sha256": "e4294347abd9ea693fecc62afc9209396445ec3085f021b1e2229bae6d5c7b30"
+    },
+    "verification/offline_package_check.json": {
+      "bytes": 1237,
+      "sha256": "09a700d441cdc6cf324c7e5f657564159f9f03ff28a9871802a9ea7d700052a8"
+    },
+    "verification/public_full_package_check.json": {
+      "bytes": 339,
+      "sha256": "d8707e70352880c67b6cd232dfff38cafaec78a49c15c4f3b17f7aaf9e88d1ae"
     }
   }
 }

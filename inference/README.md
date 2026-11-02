@@ -24,24 +24,34 @@ python3.13 -m venv .venv
 The HF model repository also includes the exact SDK source under `vendor/decision-index`;
 that directory can replace the Git URL in the installation command.
 
-For a GitHub-only checkout, download the adapter/head bundle:
+For a GitHub checkout, download the **complete model** from our HF repository:
 
 ```sh
-.venv/bin/python scripts/fetch_weights.py --local-dir .
+.venv/bin/python scripts/fetch_weights.py --local-dir . --revision f2552a5808926a29a2fd09ff686c31e952876bb4
 ```
 
-The HF model download already includes that bundle. Download the base weights separately:
+This immutable revision matches GitHub `release.json`.
+A complete HF repository snapshot already includes all weights; skip this step
+when working from that snapshot. There is no required upstream Qwen download.
+
+```text
+base/                              # all 18 original base shards and tokenizer/processor/config
+bundle/default/                    # parent LoRA, step 3000
+bundle/mixed/                      # additional LoRA, step 343
+bundle/decision_head.safetensors    # decision head
+```
+
+`base/` is a byte-identical copy of `Qwen/Qwen3.8-27B` revision
+`1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0`. Both adapters remain unmerged.
+Use **all** components together with the supplied Engine. Do not load just
+`base/`, a single standard PEFT adapter, or a stock causal-LM generation pipeline.
+The Engine loads the base and processor with `local_files_only=True`; after
+installing dependencies and downloading the package, model inference requires
+no connection to Hugging Face. Optionally check file integrity before loading:
 
 ```sh
-.venv/bin/mixed27b fetch-base --bundle ./bundle --base ./base
+.venv/bin/mixed27b verify --bundle ./bundle --base ./base
 ```
-
-This downloads the immutable `Qwen/Qwen3.8-27B` revision
-`1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0`. An existing directory containing
-that base model can be used instead. The complete inference model requires the
-base plus **both** `bundle/default` and `bundle/mixed`, and
-`bundle/decision_head.safetensors`. Do not load this as a single standard PEFT
-adapter or with a stock causal-LM generation pipeline.
 
 ## Python usage
 

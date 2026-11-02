@@ -1,0 +1,15 @@
+{
+  "started_at": 1793621022.3096488,
+  "repo_id": "k2021211255/RSI-JEV-27b",
+  "stage": "complete",
+  "file_count": 144,
+  "base_bytes": 55586114863,
+  "base_preflight_verified": true,
+  "upload_protocol": "xet",
+  "base_source_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "commit": "f2552a5808926a29a2fd09ff686c31e952876bb4",
+  "verified": true,
+  "checked_files": 144,
+  "base_files": 32,
+  "finished_at": 1793623747.9530911
+}
