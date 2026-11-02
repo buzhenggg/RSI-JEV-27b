@@ -1,0 +1,3 @@
+RSI-JEV-27b uses Qwen/Qwen3.8-27B under Apache-2.0.
+The Decision Index SDK is MIT-licensed; its license is retained in the vendored source in the model repository.
+Other runtime dependencies and upstream evaluation datasets retain their own licenses.

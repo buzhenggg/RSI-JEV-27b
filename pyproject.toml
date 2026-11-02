@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mixed27b-decision-engine"
+version = "0.2.0"
+description = "Fixed dual-LoRA 27B decision engine for Decision Index Vision"
+requires-python = ">=3.13,<3.14"
+
+[project.scripts]
+mixed27b = "mixed27b.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mixed27b*"]

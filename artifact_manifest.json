@@ -1,0 +1,72 @@
+{
+  "files": {
+    ".gitignore": {
+      "bytes": 92,
+      "sha256": "334754be100092d4e8da19ae9f2ff695f2e3b2dd754a466fd928c0b70ee85f71"
+    },
+    "LICENSE": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    "NOTICE": {
+      "bytes": 251,
+      "sha256": "5e1dcd21407e8b65e765272cda785852105c5a52dffe7292e787d85dd43f4a53"
+    },
+    "README.md": {
+      "bytes": 3969,
+      "sha256": "51746240cdd223b455f78472f6437637d8c2bf9508f0c08e6d32d009bdcc90c0"
+    },
+    "bundle/manifest.json": {
+      "bytes": 4218,
+      "sha256": "ff610345f98b171d6e44bfe696453ef8db1cc5023569e484ab95491e980c77f3"
+    },
+    "inference/README.md": {
+      "bytes": 5067,
+      "sha256": "87960436086bb76b243490fda94f7aa1895f29d501aa9bfb6383c2d640aced0c"
+    },
+    "mixed27b/__init__.py": {
+      "bytes": 85,
+      "sha256": "fd9e13389f7631e38b561b18e3df95329c5f2560d328fdd2d66b22887093ad24"
+    },
+    "mixed27b/attention.py": {
+      "bytes": 2626,
+      "sha256": "ef1b82863852b0eb6bf60da8cd610408363ce80d375b6b1a9c910c66396aa085"
+    },
+    "mixed27b/bundle.py": {
+      "bytes": 1589,
+      "sha256": "07aacf8652ded58a004360cd9e267070dd7ef8bdc83f9a813a65bf45c990405c"
+    },
+    "mixed27b/cli.py": {
+      "bytes": 1818,
+      "sha256": "3148167a1f30134fc9d1cc415aeb839923e5bfc6dd0bdb34cc913ace9f5614b6"
+    },
+    "mixed27b/engine.py": {
+      "bytes": 8849,
+      "sha256": "a2b2598d0bdf0059024a0951768dbfde33bd6c31879cfde35e9f81f29514bfdb"
+    },
+    "model_info.json": {
+      "bytes": 491,
+      "sha256": "d3d1cb179a44700ef9800611216c9d2e71e27206b4b9ec754781abfa2ce333bf"
+    },
+    "pyproject.toml": {
+      "bytes": 366,
+      "sha256": "d64fa3079d84a7666c6d0406c97d9aca28e1b33674d7a52cd83f48be9c96c36d"
+    },
+    "requirements.lock": {
+      "bytes": 1592,
+      "sha256": "632cc6e951a3cc3460a6a75629900287fbdc2385a8af1bdc37dc9555baf2440f"
+    },
+    "scripts/fetch_weights.py": {
+      "bytes": 494,
+      "sha256": "4bf100604cdfb9ec0f6fbfb8c2eff111d581e90e8a3d8c3c57c92fd858288121"
+    },
+    "scripts/official_8gpu.py": {
+      "bytes": 11750,
+      "sha256": "710325d59f050e31ffeace57cc17223be5f1e2abaac075c9b9755f225aecea87"
+    },
+    "tests/test_contract.py": {
+      "bytes": 2555,
+      "sha256": "33a92b9205e0dadd3dbd6b27366f9176f5ca0f8745b2f88859f07f32f98a3af7"
+    }
+  }
+}
