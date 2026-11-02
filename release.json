@@ -1,0 +1,16 @@
+{
+  "model": {
+    "repo_id": "k2021211255/RSI-JEV-27b",
+    "revision": "8ad76019a5b095947b523ea693a668314a374cf7"
+  },
+  "results": {
+    "repo_id": "k2021211255/RSI-JEV-27b-Results",
+    "revision": "07cee89570172e0d856ae918a8fb6b835ee21572"
+  },
+  "github_inference_commit": "13447a13b2df2e3bed6bf7145117eb045e3faf62",
+  "official_sdk_commit": "25c6ec7b6b5f44a216c63c3a700de3a9c6d6699d",
+  "public_vision_index": 78.40964645834777,
+  "rows": 12210,
+  "correct": 9940,
+  "pull_request_created": false
+}

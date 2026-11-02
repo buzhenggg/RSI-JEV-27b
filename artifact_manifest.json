@@ -52,6 +52,10 @@
       "bytes": 366,
       "sha256": "d64fa3079d84a7666c6d0406c97d9aca28e1b33674d7a52cd83f48be9c96c36d"
     },
+    "release.json": {
+      "bytes": 506,
+      "sha256": "3554f338a3bab3dde359baa62de467437506d8c4bf8a84df96e641ad31e81a6d"
+    },
     "requirements.lock": {
       "bytes": 1592,
       "sha256": "632cc6e951a3cc3460a6a75629900287fbdc2385a8af1bdc37dc9555baf2440f"
@@ -63,6 +67,14 @@
     "scripts/official_8gpu.py": {
       "bytes": 11750,
       "sha256": "710325d59f050e31ffeace57cc17223be5f1e2abaac075c9b9755f225aecea87"
+    },
+    "submission/PR_BODY.md": {
+      "bytes": 5261,
+      "sha256": "d26fd71445e534cdbb45b5ae8d4777f91d402f6f628224b8bbc03f152b38432d"
+    },
+    "submissions/README.md": {
+      "bytes": 1699,
+      "sha256": "58d5cd7c5eedb55126c67aab98052b8647ca7f28d4ddcaf48363b1b8683c72ac"
     },
     "tests/test_contract.py": {
       "bytes": 2555,
