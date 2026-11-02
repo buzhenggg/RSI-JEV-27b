@@ -27,7 +27,7 @@ that directory can replace the Git URL in the installation command.
 For a GitHub checkout, download the **complete model** from our HF repository:
 
 ```sh
-.venv/bin/python scripts/fetch_weights.py --local-dir . --revision f2552a5808926a29a2fd09ff686c31e952876bb4
+.venv/bin/python scripts/fetch_weights.py --local-dir . --revision 3a126489958a67c08233711a1c5db31c57919229
 ```
 
 This immutable revision matches GitHub `release.json`.

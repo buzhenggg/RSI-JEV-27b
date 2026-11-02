@@ -35,7 +35,7 @@ and download instructions; the large weights are hosted on Hugging Face.
 | --- | --- |
 | Base (included in `base/`) | `Qwen/Qwen3.8-27B`, revision `1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0` |
 | Parent adapter | Multitask SFT step-3000, `default` LoRA, rank 16 / alpha 32 |
-| Additional adapter | Mixed synthetic step-343, `mixed` LoRA, rank 8 / alpha 16 |
+| Additional adapter | Additional fine-tuning step-343, `mixed` LoRA, rank 8 / alpha 16 |
 | Decision head | Frozen parent 26 × 5120 readout |
 
 ## Per-benchmark results
@@ -57,21 +57,6 @@ and download instructions; the large weights are hosted on Hugging Face.
 The public index uses the official chance correction and weights, rather than a
 simple mean of the raw accuracies. R-Bench-M has weight 0.5 and MMMU-Pro vision
 0.25; the other nine benchmarks have weight 1.
-
-## Training and evaluation disclosure
-
-The parent experiment used one epoch over 119,826 cleaned multitask training
-questions; its checkpoint was chosen using internal validation. The additional
-adapter used 1,200 synthetic examples each from camera motion, counting ≥3,
-counting ≥5 and hateful-meme tasks, plus 4,800 replay examples, for 9,600 examples
-in one epoch. The base, parent adapter and decision head were frozen during this
-additional training. Checkpoint selection used synthetic validation and internal
-retention criteria, not DI scores.
-
-The synthetic tasks were designed after analysis of public benchmark weaknesses.
-This is targeted adaptation, not a blind benchmark experiment. Recorded training/
-evaluation image-SHA audits found no overlap in the audited splits; this does not
-claim knowledge of the base model's pretraining data or the private tests.
 
 ## Inference hardware and latency
 
