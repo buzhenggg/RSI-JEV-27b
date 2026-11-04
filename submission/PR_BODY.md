@@ -5,14 +5,14 @@ RSI-JEV-27b is a 27B multimodal decision model based on Qwen3.8-27B. It supports
 ## Model and results
 
 - Complete model (base weights, both adapters, decision head) and inference source: [RSI-JEV-27b](https://huggingface.co/k2021211255/RSI-JEV-27b/tree/3a126489958a67c08233711a1c5db31c57919229), revision `3a126489958a67c08233711a1c5db31c57919229`.
-- Results: [RSI-JEV-27b-Results](https://huggingface.co/datasets/k2021211255/RSI-JEV-27b-Results/tree/d92a0cdc2c59cf27e50074c5e1c4a047f8051577), revision `d92a0cdc2c59cf27e50074c5e1c4a047f8051577`.
+- Results: [RSI-JEV-27b-Results](https://huggingface.co/datasets/k2021211255/RSI-JEV-27b-Results/tree/94a70875aa1488b7f4b69c294f553738fee6315e), revision `94a70875aa1488b7f4b69c294f553738fee6315e`.
 - Evaluated inference implementation (unchanged): [mixed27b source](https://github.com/buzhenggg/RSI-JEV-27b/tree/13447a13b2df2e3bed6bf7145117eb045e3faf62/mixed27b), source commit `13447a13b2df2e3bed6bf7145117eb045e3faf62`.
 
 | Public suite | Public index | Answered requests | Correct | Complete |
 | --- | ---: | ---: | ---: | --- |
-| [Vision 0.3](https://huggingface.co/datasets/k2021211255/RSI-JEV-27b-Results/blob/d92a0cdc2c59cf27e50074c5e1c4a047f8051577/runs/rsi-jev-27b-vision/vision-scores.json) | **78.4096464583** | 12,210 | 9,940 | Yes |
+| [Vision 0.3](https://huggingface.co/datasets/k2021211255/RSI-JEV-27b-Results/blob/94a70875aa1488b7f4b69c294f553738fee6315e/runs/rsi-jev-27b-vision/vision-scores.json) | **78.4096464583** | 12,210 | 9,940 | Yes |
 
-Predictions, option probabilities, scores, all shard environments and SHA256 manifests are available in the results repository. All 12,210 rows have status `ok`; `vision-scores.json` says `complete: true`. Original result records retain the internal label `mixed27b-step343`; RSI-JEV-27b is the release name. Inference source, weights and original result lines are unchanged for publication.
+Predictions, option probabilities, scores, all shard environments and SHA256 manifests are available in the results repository. All 12,210 rows have status `ok`; `vision-scores.json` says `complete: true`. Original result records retain the internal label `mixed27b-step343`; RSI-JEV-27b is the release name. Inference source and weights are unchanged. Published records omit payload/raw_output; predictions, probabilities and scores are unchanged.
 
 ## Inference and hardware
 
